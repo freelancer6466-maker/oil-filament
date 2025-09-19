@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Events Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .event-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-date {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .event-location {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .season-indicator {
+            display: flex;
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+            justify-content: space-between;
+        }
+
+        .season {
+            text-align: center;
+            flex: 1;
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            background: var(--glass-background);
+            border: 1px solid var(--glass-border);
+        }
+
+        .season.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .festival-calendar {
+            display: grid;
+            gap: var(--spacing-lg);
+        }
+
+        .month-events {
+            border-left: 4px solid var(--primary);
+            padding-left: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .event-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: var(--radius-sm);
+            background: var(--glass-background);
+            font-size: 0.8em;
+            margin-right: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .event-details {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Cultural Events in Canada</h1>
+            <p>Discover Canada's Rich Cultural Celebrations and Festivals</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Seasonal Highlights</h2>
+            <div class="season-indicator">
+                <div class="season active">Winter</div>
+                <div class="season">Spring</div>
+                <div class="season">Summer</div>
+                <div class="season">Fall</div>
+            </div>
+            <div class="event-grid">
+                <div class="event-card">
+                    <img src="../images/winterlude.jpg" alt="Winterlude Festival" class="event-image">
+                    <div class="event-date">February 2-19, 2026</div>
+                    <h3>Winterlude</h3>
+                    <div class="event-location">Ottawa, Ontario</div>
+                    <p>Annual winter festival featuring ice sculptures, skating on the Rideau Canal, and winter sports.</p>
+                    <div class="event-details">
+                        <span class="event-tag">Festival</span>
+                        <span class="event-tag">Winter</span>
+                        <span class="event-tag">Family</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="../images/jazz-festival.jpg" alt="Montreal Jazz Festival" class="event-image">
+                    <div class="event-date">June 27 - July 6, 2026</div>
+                    <h3>Montreal Jazz Festival</h3>
+                    <div class="event-location">Montreal, Quebec</div>
+                    <p>World's largest jazz festival featuring hundreds of concerts and performances.</p>
+                    <div class="event-details">
+                        <span class="event-tag">Music</span>
+                        <span class="event-tag">Summer</span>
+                        <span class="event-tag">Arts</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="../images/calgary-stampede.jpg" alt="Calgary Stampede" class="event-image">
+                    <div class="event-date">July 3-12, 2026</div>
+                    <h3>Calgary Stampede</h3>
+                    <div class="event-location">Calgary, Alberta</div>
+                    <p>Annual rodeo, exhibition, and festival celebrating western culture and heritage.</p>
+                    <div class="event-details">
+                        <span class="event-tag">Festival</span>
+                        <span class="event-tag">Heritage</span>
+                        <span class="event-tag">Summer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Major Cultural Festivals</h2>
+            <div class="festival-calendar">
+                <div class="month-events">
+                    <h3>Winter (December - February)</h3>
+                    <div class="event-grid">
+                        <div class="event-card">
+                            <h4>Quebec Winter Carnival</h4>
+                            <div class="event-date">January 26 - February 11, 2026</div>
+                            <div class="event-location">Quebec City, Quebec</div>
+                            <p>World's largest winter carnival featuring parades, ice sculptures, and winter sports.</p>
+                        </div>
+                        <div class="event-card">
+                            <h4>Winterlicious</h4>
+                            <div class="event-date">January 26 - February 8, 2026</div>
+                            <div class="event-location">Toronto, Ontario</div>
+                            <p>Culinary celebration featuring prix fixe menus at top restaurants.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-events">
+                    <h3>Spring (March - May)</h3>
+                    <div class="event-grid">
+                        <div class="event-card">
+                            <h4>Canadian Tulip Festival</h4>
+                            <div class="event-date">May 10-20, 2026</div>
+                            <div class="event-location">Ottawa, Ontario</div>
+                            <p>Celebration of spring featuring millions of tulips in bloom.</p>
+                        </div>
+                        <div class="event-card">
+                            <h4>Vancouver Cherry Blossom Festival</h4>
+                            <div class="event-date">April 1-23, 2026</div>
+                            <div class="event-location">Vancouver, BC</div>
+                            <p>Cultural celebration of cherry blossoms with events and performances.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-events">
+                    <h3>Summer (June - August)</h3>
+                    <div class="event-grid">
+                        <div class="event-card">
+                            <h4>Canada Day Celebrations</h4>
+                            <div class="event-date">July 1, 2026</div>
+                            <div class="event-location">Nationwide</div>
+                            <p>National celebration featuring parades, concerts, and fireworks.</p>
+                        </div>
+                        <div class="event-card">
+                            <h4>Celebration of Light</h4>
+                            <div class="event-date">July 20-27, 2026</div>
+                            <div class="event-location">Vancouver, BC</div>
+                            <p>International fireworks competition and cultural festival.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-events">
+                    <h3>Fall (September - November)</h3>
+                    <div class="event-grid">
+                        <div class="event-card">
+                            <h4>Toronto International Film Festival</h4>
+                            <div class="event-date">September 4-14, 2026</div>
+                            <div class="event-location">Toronto, Ontario</div>
+                            <p>One of the world's largest film festivals showcasing international cinema.</p>
+                        </div>
+                        <div class="event-card">
+                            <h4>Celtic Colours International Festival</h4>
+                            <div class="event-date">October 9-17, 2026</div>
+                            <div class="event-location">Cape Breton, Nova Scotia</div>
+                            <p>Celebration of Celtic music and culture during fall colors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Plan Your Visit</h2>
+            <div class="event-grid">
+                <div class="event-card">
+                    <h3>Tickets & Passes</h3>
+                    <ul class="checklist">
+                        <li>Early bird discounts</li>
+                        <li>Festival packages</li>
+                        <li>Group rates</li>
+                        <li>VIP experiences</li>
+                    </ul>
+                </div>
+                <div class="event-card">
+                    <h3>Accommodation</h3>
+                    <ul class="checklist">
+                        <li>Partner hotels</li>
+                        <li>Festival camping</li>
+                        <li>Local B&Bs</li>
+                        <li>Package deals</li>
+                    </ul>
+                </div>
+                <div class="event-card">
+                    <h3>Transportation</h3>
+                    <ul class="checklist">
+                        <li>Shuttle services</li>
+                        <li>Public transit</li>
+                        <li>Parking info</li>
+                        <li>Bike rentals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Find Events</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Buy Tickets</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Benefits Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .benefit-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-amount {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: var(--spacing-md) 0;
+            font-weight: bold;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -50px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .calculator-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .form-group {
+            display: grid;
+            gap: var(--spacing-sm);
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Senior Benefits in Canada</h1>
+            <p>Comprehensive Guide to Canadian Senior Benefits and Pensions</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Old Age Security (OAS)</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Basic OAS Pension</h3>
+                    <div class="benefit-amount">Up to $642.25/month</div>
+                    <p>For seniors aged 65 and older</p>
+                    <ul class="checklist">
+                        <li>Automatic enrollment at 65</li>
+                        <li>Based on years in Canada</li>
+                        <li>Income-tested benefit</li>
+                    </ul>
+                </div>
+                <div class="benefit-card">
+                    <h3>Guaranteed Income Supplement</h3>
+                    <div class="benefit-amount">Up to $959.26/month</div>
+                    <p>Additional support for low-income seniors</p>
+                    <ul class="checklist">
+                        <li>Must receive OAS</li>
+                        <li>Income-based eligibility</li>
+                        <li>Monthly payments</li>
+                    </ul>
+                </div>
+                <div class="benefit-card">
+                    <h3>Allowance Benefits</h3>
+                    <div class="benefit-amount">Up to $1,219.68/month</div>
+                    <p>For spouses/partners aged 60-64</p>
+                    <ul class="checklist">
+                        <li>Income-tested</li>
+                        <li>Must live in Canada</li>
+                        <li>Partner receives OAS & GIS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Canada Pension Plan (CPP)</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Retirement Pension</h3>
+                    <div class="benefit-amount">Average $737.13/month</div>
+                    <p>Based on contributions during working years</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Post-Retirement Benefit</h3>
+                    <div class="benefit-amount">Additional monthly amount</div>
+                    <p>For those who work while receiving CPP</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Disability Benefits</h3>
+                    <div class="benefit-amount">Up to $1,457.45/month</div>
+                    <p>For CPP contributors with disabilities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Eligibility Requirements</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <h3>Age Requirements</h3>
+                    <ul class="checklist">
+                        <li>65+ for OAS</li>
+                        <li>60+ for CPP retirement pension</li>
+                        <li>60-64 for Allowance</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <h3>Residency</h3>
+                    <ul class="checklist">
+                        <li>Legal resident/citizen</li>
+                        <li>10+ years in Canada for OAS</li>
+                        <li>Current Canadian resident</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <h3>Income Thresholds</h3>
+                    <ul class="checklist">
+                        <li>OAS recovery tax threshold</li>
+                        <li>GIS income limits</li>
+                        <li>Allowance income tests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Benefits Calculator</h2>
+            <form class="calculator-form">
+                <div class="form-group">
+                    <label>Your Age</label>
+                    <input type="number" min="0" placeholder="Enter your age">
+                </div>
+                <div class="form-group">
+                    <label>Years in Canada</label>
+                    <input type="number" min="0" placeholder="Enter years">
+                </div>
+                <div class="form-group">
+                    <label>Annual Income</label>
+                    <input type="number" min="0" placeholder="Enter income">
+                </div>
+                <div class="form-group">
+                    <label>CPP Contributions History</label>
+                    <select>
+                        <option>Select contribution level</option>
+                        <option>Maximum contributions</option>
+                        <option>Partial contributions</option>
+                        <option>Minimal contributions</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate Benefits</button>
+            </form>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Apply for Benefits</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Download Forms</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+.legal-page {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.legal-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 40px;
+    padding: 60px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.legal-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+
+.legal-page h1 {
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+.legal-page h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+
+.last-updated {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 60px;
+    text-align: center;
+    font-style: italic;
+}
+
+.legal-section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.legal-section h2 {
+    font-size: 1.8rem;
+    color: #2A3850;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.legal-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.legal-section h3 {
+    font-size: 1.4rem;
+    color: #3A4F6D;
+    margin: 30px 0 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.legal-section p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.legal-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    text-align: center;
+    display: inline-block;
+}
+
+.legal-section ul li {
+    position: relative;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legal-section ul li::before {
+    content: '✓';
+    margin-right: 12px;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px auto 0;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 4px 0 0 4px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info svg {
+    width: 20px;
+    height: 20px;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .legal-container {
+        margin: 0 20px;
+        padding: 40px 20px;
+    }
+
+    .legal-page h1 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    .legal-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .legal-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .legal-section p,
+    .legal-section ul li {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        padding: 30px 20px;
+    }
+}
+
+/* Additional Professional Touches */
+.legal-section a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.legal-section a:hover {
+    color: var(--primary-dark);
+}
+
+.highlight-box {
+    background: rgba(var(--primary-rgb), 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
+}
+
+.highlight-box p {
+    margin-bottom: 0;
+    color: #2A3850;
+    font-weight: 500;
+}
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+    margin: 50px auto;
+    max-width: 200px;
+}

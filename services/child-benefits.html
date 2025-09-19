@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Benefits Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .benefit-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-amount {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: var(--spacing-md) 0;
+            font-weight: bold;
+        }
+
+        .calculator-form {
+            display: grid;
+            gap: var(--spacing-md);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: grid;
+            gap: var(--spacing-sm);
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -50px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Child Benefits in Canada</h1>
+            <p>Supporting Canadian Families with Children</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Canada Child Benefit (CCB)</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <h3>Base Amount</h3>
+                    <div class="benefit-amount">Up to $6,997</div>
+                    <p>Per year for each child under 6</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Child 6-17</h3>
+                    <div class="benefit-amount">Up to $5,903</div>
+                    <p>Per year for each child aged 6 through 17</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Additional Benefits</h3>
+                    <ul class="checklist">
+                        <li>Child disability benefit</li>
+                        <li>Provincial benefits</li>
+                        <li>Territory supplements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Eligibility Requirements</h2>
+            <ul class="checklist">
+                <li>Live with the child who is under 18 years of age</li>
+                <li>Primary person responsible for child's care</li>
+                <li>Canadian resident for tax purposes</li>
+                <li>You or your spouse must be:
+                    <ul>
+                        <li>Canadian citizen</li>
+                        <li>Permanent resident</li>
+                        <li>Protected person</li>
+                        <li>Temporary resident (living in Canada for 18 months)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>How to Apply</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <h3>Register Your Child</h3>
+                    <p>Register the birth of your child with your province or territory</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <h3>Automatic Enrollment</h3>
+                    <p>If you've registered the birth, you may be automatically enrolled</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <h3>Manual Application</h3>
+                    <p>If not automatically enrolled, apply through:</p>
+                    <ul class="checklist">
+                        <li>My Account on CRA website</li>
+                        <li>Form RC66 Canada Child Benefits Application</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <h3>Supporting Documents</h3>
+                    <p>Provide required documentation:</p>
+                    <ul class="checklist">
+                        <li>Proof of birth</li>
+                        <li>Proof of residency</li>
+                        <li>Status in Canada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Benefit Calculator</h2>
+            <form class="calculator-form">
+                <div class="form-group">
+                    <label>Number of Children Under 6</label>
+                    <input type="number" min="0" placeholder="Enter number">
+                </div>
+                <div class="form-group">
+                    <label>Number of Children 6-17</label>
+                    <input type="number" min="0" placeholder="Enter number">
+                </div>
+                <div class="form-group">
+                    <label>Family Net Income</label>
+                    <input type="number" min="0" placeholder="Enter annual income">
+                </div>
+                <div class="form-group">
+                    <label>Province/Territory</label>
+                    <select>
+                        <option>Select Province/Territory</option>
+                        <option>Ontario</option>
+                        <option>British Columbia</option>
+                        <option>Quebec</option>
+                        <!-- Add other provinces -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate Benefits</button>
+            </form>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Apply Online</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Download Forms</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Permits - Study in Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .info-card h2 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .timeline {
+            position: relative;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+            width: 50%;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .institution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .institution-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Study Permits</h1>
+            <p>Your Gateway to Education in Canada</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Study Permit Overview</h2>
+            <p>A study permit is an official document issued by the Canadian government that allows foreign nationals to study at designated learning institutions (DLIs) in Canada.</p>
+            <p>Most international students need a study permit to study in Canada. You must apply for a study permit before coming to Canada.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Key Requirements</h2>
+            <ul class="checklist">
+                <li>Acceptance letter from a designated learning institution (DLI)</li>
+                <li>Proof of financial support</li>
+                <li>Clean criminal record</li>
+                <li>Medical examination (if required)</li>
+                <li>Intent to leave Canada after studies</li>
+                <li>Valid passport or travel document</li>
+                <li>Language test results (if applicable)</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Application Process</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Step 1: Get Accepted</h3>
+                        <p>Receive an acceptance letter from a designated learning institution (DLI)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Step 2: Prepare Documents</h3>
+                        <p>Gather all required documents including financial proof</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Step 3: Apply Online</h3>
+                        <p>Submit your application through the IRCC portal</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Step 4: Biometrics</h3>
+                        <p>Provide biometrics if required</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Step 5: Wait for Decision</h3>
+                        <p>Processing times vary by country</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Top Canadian Institutions</h2>
+            <div class="institution-grid">
+                <div class="institution-card">
+                    <h3>University of Toronto</h3>
+                    <p>Ontario</p>
+                </div>
+                <div class="institution-card">
+                    <h3>McGill University</h3>
+                    <p>Quebec</p>
+                </div>
+                <div class="institution-card">
+                    <h3>University of British Columbia</h3>
+                    <p>British Columbia</p>
+                </div>
+                <div class="institution-card">
+                    <h3>University of Alberta</h3>
+                    <p>Alberta</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Working While Studying</h2>
+            <p>With a valid study permit, you may be able to:</p>
+            <ul class="checklist">
+                <li>Work up to 20 hours per week during regular academic sessions</li>
+                <li>Work full-time during scheduled breaks</li>
+                <li>Work as a co-op student or intern if it's part of your program</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Start Your Application</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

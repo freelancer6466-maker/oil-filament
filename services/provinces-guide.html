@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Provinces Guide | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .province-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .province-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .province-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .province-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .province-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            font-size: 0.9em;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-sm);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-sm);
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .region-selector {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .region-btn {
+            padding: var(--spacing-md) var(--spacing-lg);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .region-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .key-features {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+
+        .feature-tag {
+            padding: 4px 12px;
+            background: var(--glass-background);
+            border-radius: var(--radius-md);
+            font-size: 0.9em;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: var(--glass-background);
+        }
+
+        .comparison-table tr:hover {
+            background: var(--glass-background);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Canadian Provinces Guide</h1>
+            <p>Explore Canada's Provinces and Territories</p>
+        </div>
+
+        <div class="info-card">
+            <div class="region-selector">
+                <button class="region-btn active">All Regions</button>
+                <button class="region-btn">Western Canada</button>
+                <button class="region-btn">Central Canada</button>
+                <button class="region-btn">Atlantic Provinces</button>
+                <button class="region-btn">Northern Territories</button>
+            </div>
+
+            <div class="province-grid">
+                <div class="province-card">
+                    <img src="../images/ontario.jpg" alt="Ontario Landscape" class="province-image">
+                    <h3>Ontario</h3>
+                    <div class="province-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">14.9M</div>
+                            <div>Population</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Toronto</div>
+                            <div>Capital</div>
+                        </div>
+                    </div>
+                    <p>Canada's most populous province, home to the nation's capital and largest city.</p>
+                    <div class="key-features">
+                        <span class="feature-tag">Tech Hub</span>
+                        <span class="feature-tag">Financial Center</span>
+                        <span class="feature-tag">Niagara Falls</span>
+                    </div>
+                </div>
+
+                <div class="province-card">
+                    <img src="../images/quebec.jpg" alt="Quebec Landscape" class="province-image">
+                    <h3>Quebec</h3>
+                    <div class="province-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">8.6M</div>
+                            <div>Population</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Quebec City</div>
+                            <div>Capital</div>
+                        </div>
+                    </div>
+                    <p>Predominantly French-speaking province with rich cultural heritage and historic cities.</p>
+                    <div class="key-features">
+                        <span class="feature-tag">French Culture</span>
+                        <span class="feature-tag">Historic Sites</span>
+                        <span class="feature-tag">Arts Scene</span>
+                    </div>
+                </div>
+
+                <div class="province-card">
+                    <img src="../images/bc.jpg" alt="British Columbia Landscape" class="province-image">
+                    <h3>British Columbia</h3>
+                    <div class="province-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">5.2M</div>
+                            <div>Population</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Victoria</div>
+                            <div>Capital</div>
+                        </div>
+                    </div>
+                    <p>Known for its stunning natural beauty, mountains, and Pacific coastline.</p>
+                    <div class="key-features">
+                        <span class="feature-tag">Mountains</span>
+                        <span class="feature-tag">Pacific Coast</span>
+                        <span class="feature-tag">Mild Climate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Provincial Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Province/Territory</th>
+                        <th>Population</th>
+                        <th>Major Industries</th>
+                        <th>Climate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ontario</td>
+                        <td>14.9M</td>
+                        <td>Technology, Finance, Manufacturing</td>
+                        <td>Continental</td>
+                    </tr>
+                    <tr>
+                        <td>Quebec</td>
+                        <td>8.6M</td>
+                        <td>Aerospace, IT, Energy</td>
+                        <td>Continental</td>
+                    </tr>
+                    <tr>
+                        <td>British Columbia</td>
+                        <td>5.2M</td>
+                        <td>Film, Tourism, Forestry</td>
+                        <td>Temperate</td>
+                    </tr>
+                    <tr>
+                        <td>Alberta</td>
+                        <td>4.4M</td>
+                        <td>Energy, Agriculture, Tourism</td>
+                        <td>Prairie</td>
+                    </tr>
+                    <tr>
+                        <td>Manitoba</td>
+                        <td>1.4M</td>
+                        <td>Agriculture, Mining, Energy</td>
+                        <td>Continental</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-card">
+            <h2>Regional Highlights</h2>
+            <div class="province-grid">
+                <div class="province-card">
+                    <h3>Western Canada</h3>
+                    <ul class="checklist">
+                        <li>Rocky Mountains</li>
+                        <li>Pacific Coast</li>
+                        <li>Prairie Provinces</li>
+                        <li>National Parks</li>
+                    </ul>
+                </div>
+                <div class="province-card">
+                    <h3>Central Canada</h3>
+                    <ul class="checklist">
+                        <li>Economic Hub</li>
+                        <li>Great Lakes</li>
+                        <li>Cultural Diversity</li>
+                        <li>Major Cities</li>
+                    </ul>
+                </div>
+                <div class="province-card">
+                    <h3>Atlantic Canada</h3>
+                    <ul class="checklist">
+                        <li>Maritime Culture</li>
+                        <li>Coastal Beauty</li>
+                        <li>Historic Sites</li>
+                        <li>Seafood Industry</li>
+                    </ul>
+                </div>
+                <div class="province-card">
+                    <h3>Northern Territories</h3>
+                    <ul class="checklist">
+                        <li>Arctic Landscapes</li>
+                        <li>Indigenous Culture</li>
+                        <li>Northern Lights</li>
+                        <li>Unique Wildlife</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Explore Provinces</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Compare Regions</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

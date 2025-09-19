@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Information Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .attraction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .attraction-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .season-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .season-tab {
+            padding: var(--spacing-md) var(--spacing-lg);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .season-tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .destination-details {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .rating {
+            color: #ffd700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .tour-package {
+            padding: var(--spacing-lg);
+            background: var(--glass-background);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .package-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .package-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .visa-requirements {
+            display: grid;
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .requirement-item {
+            padding: var(--spacing-md);
+            background: var(--glass-background);
+            border-radius: var(--radius-md);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: var(--glass-background);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Tourism Information</h1>
+            <p>Discover Canada's Most Beautiful Destinations</p>
+        </div>
+
+        <div class="info-card">
+            <div class="season-tabs">
+                <button class="season-tab active">All Seasons</button>
+                <button class="season-tab">Summer</button>
+                <button class="season-tab">Fall</button>
+                <button class="season-tab">Winter</button>
+                <button class="season-tab">Spring</button>
+            </div>
+
+            <div class="attraction-grid">
+                <div class="attraction-card">
+                    <img src="../images/niagara-falls.jpg" alt="Niagara Falls" class="attraction-image">
+                    <h3>Niagara Falls</h3>
+                    <div class="rating">★★★★★</div>
+                    <p>One of the world's most famous natural wonders, featuring boat tours and stunning views.</p>
+                    <div class="destination-details">
+                        <span class="tag">Natural Wonder</span>
+                        <span class="tag">Year-round</span>
+                    </div>
+                </div>
+
+                <div class="attraction-card">
+                    <img src="../images/banff.jpg" alt="Banff National Park" class="attraction-image">
+                    <h3>Banff National Park</h3>
+                    <div class="rating">★★★★★</div>
+                    <p>Rocky Mountain paradise offering hiking, skiing, and stunning mountain landscapes.</p>
+                    <div class="destination-details">
+                        <span class="tag">National Park</span>
+                        <span class="tag">Adventure</span>
+                    </div>
+                </div>
+
+                <div class="attraction-card">
+                    <img src="../images/old-quebec.jpg" alt="Old Quebec" class="attraction-image">
+                    <h3>Old Quebec</h3>
+                    <div class="rating">★★★★★</div>
+                    <p>UNESCO World Heritage site with European charm and historic architecture.</p>
+                    <div class="destination-details">
+                        <span class="tag">Historic</span>
+                        <span class="tag">Cultural</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Popular Tour Packages</h2>
+            <div class="tour-package">
+                <h3>Canadian Rockies Adventure</h3>
+                <p>7 days exploring Banff, Lake Louise, and Jasper National Parks.</p>
+                <div class="package-details">
+                    <div class="package-feature">
+                        <span>Duration: 7 Days</span>
+                    </div>
+                    <div class="package-feature">
+                        <span>From $2,499</span>
+                    </div>
+                    <div class="package-feature">
+                        <span>All-inclusive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-package">
+                <h3>Eastern Canada Heritage Tour</h3>
+                <p>10 days discovering Toronto, Ottawa, Montreal, and Quebec City.</p>
+                <div class="package-details">
+                    <div class="package-feature">
+                        <span>Duration: 10 Days</span>
+                    </div>
+                    <div class="package-feature">
+                        <span>From $3,299</span>
+                    </div>
+                    <div class="package-feature">
+                        <span>Guided Tours</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-package">
+                <h3>Maritime Experience</h3>
+                <p>8 days exploring Nova Scotia, New Brunswick, and Prince Edward Island.</p>
+                <div class="package-details">
+                    <div class="package-feature">
+                        <span>Duration: 8 Days</span>
+                    </div>
+                    <div class="package-feature">
+                        <span>From $2,799</span>
+                    </div>
+                    <div class="package-feature">
+                        <span>Coastal Views</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Visa Information</h2>
+            <div class="visa-requirements">
+                <div class="requirement-item">
+                    <h3>Tourist Visa (TRV)</h3>
+                    <ul class="checklist">
+                        <li>Valid passport</li>
+                        <li>Proof of funds</li>
+                        <li>Travel itinerary</li>
+                        <li>Purpose of visit</li>
+                    </ul>
+                </div>
+                <div class="requirement-item">
+                    <h3>eTA Requirements</h3>
+                    <ul class="checklist">
+                        <li>Visa-exempt countries</li>
+                        <li>Valid passport</li>
+                        <li>Online application</li>
+                        <li>Processing fee</li>
+                    </ul>
+                </div>
+                <div class="requirement-item">
+                    <h3>Processing Times</h3>
+                    <ul class="checklist">
+                        <li>TRV: 14-30 days</li>
+                        <li>eTA: Minutes to 72 hours</li>
+                        <li>Express processing available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Travel Tips</h2>
+            <div class="attraction-grid">
+                <div class="attraction-card">
+                    <h3>Weather Preparation</h3>
+                    <ul class="checklist">
+                        <li>Check seasonal forecasts</li>
+                        <li>Pack appropriate clothing</li>
+                        <li>Layer clothing</li>
+                        <li>Rain/snow gear</li>
+                    </ul>
+                </div>
+                <div class="attraction-card">
+                    <h3>Transportation</h3>
+                    <ul class="checklist">
+                        <li>Public transit options</li>
+                        <li>Car rental information</li>
+                        <li>Train travel</li>
+                        <li>Domestic flights</li>
+                    </ul>
+                </div>
+                <div class="attraction-card">
+                    <h3>Local Customs</h3>
+                    <ul class="checklist">
+                        <li>Tipping guidelines</li>
+                        <li>Cultural etiquette</li>
+                        <li>Language basics</li>
+                        <li>Local customs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Book Tour</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Visa Application</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

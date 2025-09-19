@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Insurance (EI) - Canada Benefits | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .benefit-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .calculator-form {
+            background: var(--glass-background);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .timeline {
+            position: relative;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Employment Insurance (EI)</h1>
+            <p>Financial Support When You Need It Most</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Types of EI Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Regular Benefits</h3>
+                    <p>For individuals who lost their job through no fault of their own</p>
+                    <ul class="checklist">
+                        <li>Up to 45 weeks of benefits</li>
+                        <li>55% of average earnings</li>
+                        <li>Maximum $638 per week</li>
+                    </ul>
+                </div>
+                <div class="benefit-card">
+                    <h3>Sickness Benefits</h3>
+                    <p>For individuals unable to work due to illness or injury</p>
+                    <ul class="checklist">
+                        <li>Up to 15 weeks of benefits</li>
+                        <li>Medical certificate required</li>
+                        <li>Same payment rate as regular benefits</li>
+                    </ul>
+                </div>
+                <div class="benefit-card">
+                    <h3>Maternity & Parental</h3>
+                    <p>For new parents and expecting mothers</p>
+                    <ul class="checklist">
+                        <li>Up to 15 weeks maternity</li>
+                        <li>Up to 35 weeks parental</li>
+                        <li>Extended option available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Eligibility Requirements</h2>
+            <ul class="checklist">
+                <li>Minimum 420-700 insurable hours in the last 52 weeks</li>
+                <li>Loss of job through no fault of your own</li>
+                <li>Ready, willing, and capable of working</li>
+                <li>Actively seeking employment</li>
+                <li>Valid Social Insurance Number</li>
+                <li>Submit bi-weekly reports</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Application Process</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Gather Documents</h3>
+                    <p>Record of Employment (ROE), identification, banking information</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Apply Online</h3>
+                    <p>Submit application through Service Canada</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Waiting Period</h3>
+                    <p>One-week waiting period before benefits start</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Report Bi-Weekly</h3>
+                    <p>Complete reports to continue receiving benefits</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>EI Payment Calculator</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="income">Average Weekly Income</label>
+                    <input type="number" id="income" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="hours">Insurable Hours</label>
+                    <input type="number" id="hours" class="form-control">
+                </div>
+                <button class="btn btn-primary" style="margin-top: var(--spacing-lg);">Calculate Benefits</button>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Additional Resources</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Appeals Process</h3>
+                    <p>Information about challenging EI decisions</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Training Benefits</h3>
+                    <p>Skills development while on EI</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Self-Employed Benefits</h3>
+                    <p>Special rules for self-employed individuals</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Apply for EI Benefits</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Contact Support</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

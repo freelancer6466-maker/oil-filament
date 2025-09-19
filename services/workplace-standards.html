@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Standards - Canadian Labor Laws | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .standard-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: var(--spacing-md);
+            border: 1px solid var(--glass-border);
+            text-align: left;
+        }
+
+        .info-table th {
+            background: var(--glass-background);
+            font-weight: 600;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Workplace Standards</h1>
+            <p>Understanding Canadian Labour Laws and Regulations</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Key Workplace Rights</h2>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <h3>Hours of Work</h3>
+                    <ul class="checklist">
+                        <li>Standard 8-hour workday</li>
+                        <li>40-hour workweek</li>
+                        <li>Minimum 30-minute breaks</li>
+                        <li>Overtime after 44 hours</li>
+                    </ul>
+                </div>
+                <div class="standard-card">
+                    <h3>Minimum Wage</h3>
+                    <ul class="checklist">
+                        <li>Varies by province</li>
+                        <li>Regular adjustments</li>
+                        <li>Special rates for specific jobs</li>
+                    </ul>
+                </div>
+                <div class="standard-card">
+                    <h3>Leave Entitlements</h3>
+                    <ul class="checklist">
+                        <li>2 weeks paid vacation</li>
+                        <li>9 statutory holidays</li>
+                        <li>Sick leave provisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Provincial Minimum Wage Rates</h2>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Province/Territory</th>
+                        <th>Minimum Wage</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ontario</td>
+                        <td>$16.55/hour</td>
+                        <td>October 2023</td>
+                    </tr>
+                    <tr>
+                        <td>British Columbia</td>
+                        <td>$16.75/hour</td>
+                        <td>June 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Alberta</td>
+                        <td>$15.55/hour</td>
+                        <td>October 2022</td>
+                    </tr>
+                    <tr>
+                        <td>Quebec</td>
+                        <td>$15.25/hour</td>
+                        <td>May 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-card">
+            <h2>Workplace Health & Safety</h2>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <h3>Employer Obligations</h3>
+                    <ul class="checklist">
+                        <li>Safe work environment</li>
+                        <li>Safety training</li>
+                        <li>Protective equipment</li>
+                        <li>Hazard information</li>
+                    </ul>
+                </div>
+                <div class="standard-card">
+                    <h3>Employee Rights</h3>
+                    <ul class="checklist">
+                        <li>Right to know about hazards</li>
+                        <li>Right to participate in safety</li>
+                        <li>Right to refuse unsafe work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Employment Standards</h2>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <h3>Termination Notice</h3>
+                    <p>Required notice periods based on length of employment:</p>
+                    <ul class="checklist">
+                        <li>3 months - 1 week</li>
+                        <li>1-3 years - 2 weeks</li>
+                        <li>3-5 years - 3 weeks</li>
+                        <li>5+ years - 4+ weeks</li>
+                    </ul>
+                </div>
+                <div class="standard-card">
+                    <h3>Overtime Pay</h3>
+                    <ul class="checklist">
+                        <li>1.5x regular rate</li>
+                        <li>After 44 hours/week</li>
+                        <li>Special rules for holidays</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Employee Benefits</h2>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <h3>Mandatory Benefits</h3>
+                    <ul class="checklist">
+                        <li>Employment Insurance</li>
+                        <li>Canada Pension Plan</li>
+                        <li>Workers' Compensation</li>
+                    </ul>
+                </div>
+                <div class="standard-card">
+                    <h3>Common Additional Benefits</h3>
+                    <ul class="checklist">
+                        <li>Health insurance</li>
+                        <li>Dental coverage</li>
+                        <li>Life insurance</li>
+                        <li>Retirement plans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Report Workplace Issue</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Know Your Rights</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

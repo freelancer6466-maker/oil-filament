@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details - oil-filament</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .job-details-container {
+            max-width: 800px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .job-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .job-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .job-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            color: var(--text-secondary);
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .job-section {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .job-section h2 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .requirements-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .requirements-list li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+            position: relative;
+        }
+
+        .requirements-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .apply-section {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+        }
+
+        .apply-button {
+            font-size: 1.2rem;
+            padding: var(--spacing-md) var(--spacing-xl);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (same as other pages) -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li>
+                    <a href="#" class="nav-link-services">Services</a>
+                </li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Job Details -->
+    <main class="job-details-container">
+        <div class="job-header">
+            <h1 class="job-title">Senior Software Engineer</h1>
+            <div class="job-meta">
+                <span>📍 Zurich, Switzerland</span>
+                <span>💼 Full-time</span>
+                <span>🔥 Senior Level</span>
+                <span>💰 Competitive</span>
+            </div>
+        </div>
+
+        <section class="job-section">
+            <h2>About the Role</h2>
+            <p>We are seeking an experienced Senior Software Engineer to join our dynamic team in Zurich. You will be responsible for designing, developing, and maintaining enterprise-level applications while mentoring junior developers and contributing to our technical strategy.</p>
+        </section>
+
+        <section class="job-section">
+            <h2>Requirements</h2>
+            <ul class="requirements-list">
+                <li>8+ years of experience in software development</li>
+                <li>Expert knowledge of modern JavaScript/TypeScript</li>
+                <li>Experience with cloud platforms (AWS, Azure, GCP)</li>
+                <li>Strong understanding of software architecture patterns</li>
+                <li>Experience leading technical teams and mentoring developers</li>
+                <li>Excellent problem-solving and communication skills</li>
+                <li>Fluent in English; German is a plus</li>
+            </ul>
+        </section>
+
+        <section class="job-section">
+            <h2>What We Offer</h2>
+            <ul class="requirements-list">
+                <li>Competitive salary and benefits package</li>
+                <li>Remote work options and flexible hours</li>
+                <li>Professional development opportunities</li>
+                <li>Modern office in central Zurich</li>
+                <li>Health insurance and retirement plans</li>
+                <li>Regular team events and activities</li>
+            </ul>
+        </section>
+
+        <div class="apply-section">
+            <a href="apply.html" class="btn btn-primary apply-button">Apply Now</a>
+        </div>
+    </main>
+
+    <!-- Footer (same as other pages) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

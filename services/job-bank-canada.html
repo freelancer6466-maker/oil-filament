@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Bank Canada - Find Your Next Career | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .job-search-form {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .job-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .category-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .stat-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Job Bank Canada</h1>
+            <p>Your Gateway to Employment Opportunities in Canada</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Find Your Next Career</h2>
+            <p>Search thousands of jobs from Canadian employers across all industries and locations.</p>
+            <div class="job-search-form">
+                <input type="text" class="form-control" placeholder="Job title, keywords, or company">
+                <button class="btn btn-primary">Search Jobs</button>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Job Market Insights</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">900K+</div>
+                    <p>Active Job Listings</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5.4%</div>
+                    <p>Unemployment Rate</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$64K</div>
+                    <p>Median Salary</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">13</div>
+                    <p>Provinces & Territories</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Top Industries</h2>
+            <div class="job-categories">
+                <div class="category-card">
+                    <h3>Technology</h3>
+                    <p>Software Development</p>
+                    <p>IT Infrastructure</p>
+                    <p>Data Science</p>
+                </div>
+                <div class="category-card">
+                    <h3>Healthcare</h3>
+                    <p>Nursing</p>
+                    <p>Medical Practice</p>
+                    <p>Mental Health</p>
+                </div>
+                <div class="category-card">
+                    <h3>Finance</h3>
+                    <p>Banking</p>
+                    <p>Investment</p>
+                    <p>Insurance</p>
+                </div>
+                <div class="category-card">
+                    <h3>Skilled Trades</h3>
+                    <p>Construction</p>
+                    <p>Manufacturing</p>
+                    <p>Maintenance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Job Search Resources</h2>
+            <ul class="checklist">
+                <li>Resume Builder & Templates</li>
+                <li>Career Planning Tools</li>
+                <li>Salary Calculator</li>
+                <li>Interview Preparation Guides</li>
+                <li>Labour Market Information</li>
+                <li>Skills Assessment Tests</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>For Employers</h2>
+            <div class="job-categories">
+                <div class="category-card">
+                    <h3>Post Jobs</h3>
+                    <p>Reach millions of qualified candidates</p>
+                </div>
+                <div class="category-card">
+                    <h3>Recruitment Tools</h3>
+                    <p>Streamline your hiring process</p>
+                </div>
+                <div class="category-card">
+                    <h3>Labour Market Info</h3>
+                    <p>Access industry insights</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Create Account</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Post a Job</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

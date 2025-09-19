@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Support Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .housing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .housing-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .housing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .calculator-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .form-group {
+            display: grid;
+            gap: var(--spacing-sm);
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-item {
+            padding: var(--spacing-lg);
+            background: var(--glass-background);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-md);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .program-details {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .eligibility-criteria {
+            display: grid;
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .criteria-item {
+            padding: var(--spacing-md);
+            background: var(--glass-background);
+            border-radius: var(--radius-md);
+        }
+
+        .steps-container {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .step-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .step-number {
+            position: absolute;
+            left: -50px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Housing Support</h1>
+            <p>Access Housing Programs and Resources in Canada</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Housing Programs</h2>
+            <div class="housing-grid">
+                <div class="housing-card">
+                    <h3>First-Time Home Buyer Incentive</h3>
+                    <ul class="checklist">
+                        <li>5-10% of purchase price</li>
+                        <li>Shared equity mortgage</li>
+                        <li>No monthly payments</li>
+                        <li>Repay in 25 years or sale</li>
+                    </ul>
+                </div>
+                <div class="housing-card">
+                    <h3>Affordable Housing Initiative</h3>
+                    <ul class="checklist">
+                        <li>Rental assistance</li>
+                        <li>Income-based eligibility</li>
+                        <li>Long-term housing</li>
+                        <li>Support services</li>
+                    </ul>
+                </div>
+                <div class="housing-card">
+                    <h3>Home Renovation Programs</h3>
+                    <ul class="checklist">
+                        <li>Accessibility modifications</li>
+                        <li>Energy efficiency</li>
+                        <li>Emergency repairs</li>
+                        <li>Senior adaptations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Mortgage Calculator</h2>
+            <form class="calculator-form">
+                <div class="form-group">
+                    <label>Purchase Price</label>
+                    <input type="number" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label>Down Payment</label>
+                    <input type="number" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label>Interest Rate</label>
+                    <input type="number" step="0.1" placeholder="Enter rate">
+                </div>
+                <div class="form-group">
+                    <label>Amortization Period</label>
+                    <select>
+                        <option>15 years</option>
+                        <option>20 years</option>
+                        <option selected>25 years</option>
+                        <option>30 years</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate Payment</button>
+            </form>
+        </div>
+
+        <div class="info-card">
+            <h2>Eligibility Requirements</h2>
+            <div class="eligibility-criteria">
+                <div class="criteria-item">
+                    <h3>First-Time Buyer</h3>
+                    <ul class="checklist">
+                        <li>Never owned a home</li>
+                        <li>Maximum income $120,000</li>
+                        <li>Canadian citizen/PR</li>
+                        <li>Minimum credit score 650</li>
+                    </ul>
+                </div>
+                <div class="criteria-item">
+                    <h3>Rental Assistance</h3>
+                    <ul class="checklist">
+                        <li>Income below threshold</li>
+                        <li>Canadian resident</li>
+                        <li>No property ownership</li>
+                        <li>Current renter</li>
+                    </ul>
+                </div>
+                <div class="criteria-item">
+                    <h3>Renovation Support</h3>
+                    <ul class="checklist">
+                        <li>Property owner</li>
+                        <li>Primary residence</li>
+                        <li>Property value limit</li>
+                        <li>Urgent repairs needed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Application Process</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Check Eligibility</h3>
+                    <p>Review program requirements and confirm eligibility criteria.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Gather Documents</h3>
+                    <ul class="checklist">
+                        <li>Income verification</li>
+                        <li>Identity documents</li>
+                        <li>Property information</li>
+                        <li>Bank statements</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Submit Application</h3>
+                    <p>Complete application form and submit required documentation.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Assessment</h3>
+                    <p>Application review and verification process.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Additional Resources</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>Housing Counseling</h3>
+                    <p>Free counseling services to help with housing decisions and financial planning.</p>
+                    <div class="program-details">
+                        <a href="#" class="btn btn-outline">Book Consultation</a>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <h3>Legal Aid Services</h3>
+                    <p>Legal assistance for housing-related issues and tenant rights.</p>
+                    <div class="program-details">
+                        <a href="#" class="btn btn-outline">Find Services</a>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <h3>Emergency Housing</h3>
+                    <p>Immediate assistance for those facing housing crisis or homelessness.</p>
+                    <div class="program-details">
+                        <a href="#" class="btn btn-outline">Get Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Apply for Support</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Contact Advisor</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

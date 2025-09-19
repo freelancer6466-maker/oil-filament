@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts and Heritage Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .arts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .arts-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .arts-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .heritage-site {
+            margin-bottom: var(--spacing-xl);
+            border-left: 4px solid var(--primary);
+            padding-left: var(--spacing-lg);
+        }
+
+        .site-details {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+
+        .virtual-tour {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-top: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .museum-hours {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--spacing-sm) var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .tag {
+            padding: 4px 12px;
+            background: var(--glass-background);
+            border-radius: var(--radius-md);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Arts and Heritage</h1>
+            <p>Discover Canada's Rich Cultural Heritage and Artistic Excellence</p>
+        </div>
+
+        <div class="info-card">
+            <h2>National Museums</h2>
+            <div class="arts-grid">
+                <div class="arts-card">
+                    <img src="../images/museum-history.jpg" alt="Canadian Museum of History" class="feature-image">
+                    <h3>Canadian Museum of History</h3>
+                    <p>Canada's most visited museum, showcasing the country's rich history and cultural heritage.</p>
+                    <div class="museum-hours">
+                        <span>Tuesday-Sunday</span>
+                        <span>9:30 AM - 5:00 PM</span>
+                        <span>Location</span>
+                        <span>Gatineau, Quebec</span>
+                    </div>
+                    <div class="virtual-tour">
+                        <a href="#" class="btn btn-primary">Take Virtual Tour</a>
+                    </div>
+                </div>
+                <div class="arts-card">
+                    <img src="../images/national-gallery.jpg" alt="National Gallery" class="feature-image">
+                    <h3>National Gallery of Canada</h3>
+                    <p>Home to the world's largest collection of Canadian art and contemporary masterpieces.</p>
+                    <div class="museum-hours">
+                        <span>Tuesday-Sunday</span>
+                        <span>10:00 AM - 5:00 PM</span>
+                        <span>Location</span>
+                        <span>Ottawa, Ontario</span>
+                    </div>
+                    <div class="virtual-tour">
+                        <a href="#" class="btn btn-primary">View Collections</a>
+                    </div>
+                </div>
+                <div class="arts-card">
+                    <img src="../images/rom.jpg" alt="Royal Ontario Museum" class="feature-image">
+                    <h3>Royal Ontario Museum</h3>
+                    <p>Canada's largest museum of art, culture, and nature from around the world.</p>
+                    <div class="museum-hours">
+                        <span>Daily</span>
+                        <span>10:00 AM - 5:30 PM</span>
+                        <span>Location</span>
+                        <span>Toronto, Ontario</span>
+                    </div>
+                    <div class="virtual-tour">
+                        <a href="#" class="btn btn-primary">Explore Exhibits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>UNESCO World Heritage Sites</h2>
+            <div class="heritage-site">
+                <h3>L'Anse aux Meadows National Historic Site</h3>
+                <p>The first and only known site established by Vikings in North America, dating back to approximately 1000 CE.</p>
+                <div class="site-details">
+                    <span>Location: Newfoundland and Labrador</span>
+                    <span>Designated: 1978</span>
+                </div>
+            </div>
+            <div class="heritage-site">
+                <h3>Old Quebec</h3>
+                <p>The only North American city to preserve its ramparts, historic district represents 400 years of history.</p>
+                <div class="site-details">
+                    <span>Location: Quebec City, Quebec</span>
+                    <span>Designated: 1985</span>
+                </div>
+            </div>
+            <div class="heritage-site">
+                <h3>Canadian Rocky Mountain Parks</h3>
+                <p>Seven parks featuring mountain landscapes, glaciers, waterfalls, canyons, and limestone caves.</p>
+                <div class="site-details">
+                    <span>Location: Alberta & British Columbia</span>
+                    <span>Designated: 1984</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Indigenous Arts & Culture</h2>
+            <div class="arts-grid">
+                <div class="arts-card">
+                    <h3>Traditional Art Forms</h3>
+                    <ul class="checklist">
+                        <li>Totem poles</li>
+                        <li>Inuit sculptures</li>
+                        <li>Beadwork</li>
+                        <li>Basketry</li>
+                    </ul>
+                    <div class="tag-list">
+                        <span class="tag">First Nations</span>
+                        <span class="tag">Inuit</span>
+                        <span class="tag">Métis</span>
+                    </div>
+                </div>
+                <div class="arts-card">
+                    <h3>Contemporary Artists</h3>
+                    <ul class="checklist">
+                        <li>Gallery exhibitions</li>
+                        <li>Public installations</li>
+                        <li>Digital arts</li>
+                        <li>Mixed media</li>
+                    </ul>
+                    <div class="tag-list">
+                        <span class="tag">Modern</span>
+                        <span class="tag">Traditional</span>
+                        <span class="tag">Fusion</span>
+                    </div>
+                </div>
+                <div class="arts-card">
+                    <h3>Cultural Centers</h3>
+                    <ul class="checklist">
+                        <li>Interactive exhibits</li>
+                        <li>Educational programs</li>
+                        <li>Workshops</li>
+                        <li>Cultural events</li>
+                    </ul>
+                    <div class="tag-list">
+                        <span class="tag">Education</span>
+                        <span class="tag">Heritage</span>
+                        <span class="tag">Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Performing Arts</h2>
+            <div class="arts-grid">
+                <div class="arts-card">
+                    <h3>Theatre</h3>
+                    <p>Major companies and venues across Canada showcasing local and international productions.</p>
+                    <ul class="checklist">
+                        <li>Stratford Festival</li>
+                        <li>Shaw Festival</li>
+                        <li>National Arts Centre</li>
+                    </ul>
+                </div>
+                <div class="arts-card">
+                    <h3>Dance</h3>
+                    <p>World-renowned dance companies and contemporary choreographers.</p>
+                    <ul class="checklist">
+                        <li>National Ballet of Canada</li>
+                        <li>Royal Winnipeg Ballet</li>
+                        <li>Les Grands Ballets Canadiens</li>
+                    </ul>
+                </div>
+                <div class="arts-card">
+                    <h3>Music</h3>
+                    <p>Classical orchestras, opera companies, and contemporary ensembles.</p>
+                    <ul class="checklist">
+                        <li>Toronto Symphony Orchestra</li>
+                        <li>Canadian Opera Company</li>
+                        <li>Orchestre symphonique de Montréal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Find Cultural Sites</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Book Tours</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

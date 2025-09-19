@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation Guide Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .transport-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .transport-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .route-map {
+            width: 100%;
+            height: 300px;
+            background: var(--glass-background);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .fare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .fare-table th,
+        .fare-table td {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .fare-table th {
+            background: var(--glass-background);
+        }
+
+        .fare-table tr:hover {
+            background: var(--glass-background);
+        }
+
+        .icon-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .icon-feature i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .search-form {
+            display: grid;
+            gap: var(--spacing-md);
+            max-width: 600px;
+            margin: var(--spacing-lg) auto;
+        }
+
+        .form-group {
+            display: grid;
+            gap: var(--spacing-sm);
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+
+        .schedule-container {
+            display: grid;
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .schedule-item {
+            padding: var(--spacing-md);
+            background: var(--glass-background);
+            border-radius: var(--radius-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .transport-mode {
+            padding: var(--spacing-md);
+            background: var(--glass-background);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .transport-mode h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Transportation Guide</h1>
+            <p>Navigate Canada's Transportation Systems</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Public Transit Systems</h2>
+            <div class="transport-grid">
+                <div class="transport-card">
+                    <h3>Major City Transit</h3>
+                    <ul class="checklist">
+                        <li>Toronto TTC</li>
+                        <li>Montreal STM</li>
+                        <li>Vancouver TransLink</li>
+                        <li>Calgary Transit</li>
+                    </ul>
+                </div>
+                <div class="transport-card">
+                    <h3>Payment Methods</h3>
+                    <ul class="checklist">
+                        <li>Transit Cards</li>
+                        <li>Mobile Payments</li>
+                        <li>Monthly Passes</li>
+                        <li>Student Discounts</li>
+                    </ul>
+                </div>
+                <div class="transport-card">
+                    <h3>Transit Types</h3>
+                    <ul class="checklist">
+                        <li>Subway Systems</li>
+                        <li>Light Rail</li>
+                        <li>Bus Networks</li>
+                        <li>Streetcars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Intercity Travel</h2>
+            <div class="transport-mode">
+                <h3>VIA Rail</h3>
+                <p>Canada's national passenger rail service connecting major cities.</p>
+                <div class="schedule-container">
+                    <div class="schedule-item">
+                        <span>Toronto - Montreal</span>
+                        <span>5 hours</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span>Vancouver - Edmonton</span>
+                        <span>27 hours</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span>Quebec City - Ottawa</span>
+                        <span>6 hours</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transport-mode">
+                <h3>Domestic Airlines</h3>
+                <ul class="checklist">
+                    <li>Air Canada</li>
+                    <li>WestJet</li>
+                    <li>Porter Airlines</li>
+                    <li>Regional Carriers</li>
+                </ul>
+            </div>
+
+            <div class="transport-mode">
+                <h3>Bus Services</h3>
+                <ul class="checklist">
+                    <li>Greyhound Canada</li>
+                    <li>Coach Canada</li>
+                    <li>Maritime Bus</li>
+                    <li>Regional Services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Fare Guide</h2>
+            <table class="fare-table">
+                <thead>
+                    <tr>
+                        <th>Mode</th>
+                        <th>Single Trip</th>
+                        <th>Day Pass</th>
+                        <th>Monthly Pass</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toronto TTC</td>
+                        <td>$3.35</td>
+                        <td>$13.50</td>
+                        <td>$156.00</td>
+                    </tr>
+                    <tr>
+                        <td>Montreal STM</td>
+                        <td>$3.50</td>
+                        <td>$10.00</td>
+                        <td>$90.50</td>
+                    </tr>
+                    <tr>
+                        <td>Vancouver TransLink</td>
+                        <td>$3.05-5.90</td>
+                        <td>$10.75</td>
+                        <td>$98.00-177.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-card">
+            <h2>Route Planner</h2>
+            <form class="search-form">
+                <div class="form-group">
+                    <label>From</label>
+                    <input type="text" placeholder="Enter starting point">
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <input type="text" placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Travel Date</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Mode of Transport</label>
+                    <select>
+                        <option>All Options</option>
+                        <option>Train</option>
+                        <option>Bus</option>
+                        <option>Flight</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Find Routes</button>
+            </form>
+        </div>
+
+        <div class="info-card">
+            <h2>Travel Tips</h2>
+            <div class="transport-grid">
+                <div class="transport-card">
+                    <h3>Winter Travel</h3>
+                    <ul class="checklist">
+                        <li>Check weather conditions</li>
+                        <li>Allow extra time</li>
+                        <li>Winter tires required</li>
+                        <li>Emergency kit essential</li>
+                    </ul>
+                </div>
+                <div class="transport-card">
+                    <h3>Apps & Tools</h3>
+                    <ul class="checklist">
+                        <li>Transit apps</li>
+                        <li>Real-time tracking</li>
+                        <li>Payment apps</li>
+                        <li>Route planners</li>
+                    </ul>
+                </div>
+                <div class="transport-card">
+                    <h3>Accessibility</h3>
+                    <ul class="checklist">
+                        <li>Wheelchair access</li>
+                        <li>Audio announcements</li>
+                        <li>Priority seating</li>
+                        <li>Support services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Download Transit App</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">View Schedules</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

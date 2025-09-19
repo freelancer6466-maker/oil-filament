@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Entry - Canada Immigration System | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .info-card h2 {
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .info-card p {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        .requirements-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .requirements-list li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .requirements-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+        }
+
+        .score-calculator {
+            background: var(--glass-background);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Express Entry</h1>
+            <p>Your Fast Track to Canadian Permanent Residence</p>
+        </div>
+
+        <div class="info-card">
+            <h2>What is Express Entry?</h2>
+            <p>Express Entry is Canada's flagship immigration system that manages skilled worker applications. It's designed to select immigrants based on their ability to settle in Canada and contribute to the Canadian economy.</p>
+            <p>The system manages applications for three federal economic immigration programs:</p>
+            <ul class="requirements-list">
+                <li>Federal Skilled Worker Program</li>
+                <li>Federal Skilled Trades Program</li>
+                <li>Canadian Experience Class</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Key Requirements</h2>
+            <ul class="requirements-list">
+                <li>Create an online Express Entry profile</li>
+                <li>Meet minimum language requirements (English/French)</li>
+                <li>Have eligible work experience</li>
+                <li>Obtain an Educational Credential Assessment (ECA)</li>
+                <li>Prove you have enough funds to settle in Canada</li>
+                <li>Score enough points in the Comprehensive Ranking System (CRS)</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>The Process</h2>
+            <ol class="requirements-list">
+                <li>Create an Express Entry profile</li>
+                <li>Get ranked in the Express Entry pool</li>
+                <li>Receive an Invitation to Apply (ITA) if selected</li>
+                <li>Submit a complete application within 60 days</li>
+                <li>Receive a decision on your application</li>
+            </ol>
+        </div>
+
+        <div class="score-calculator">
+            <h2>CRS Score Calculator</h2>
+            <p>Calculate your Comprehensive Ranking System (CRS) score:</p>
+            <div class="score-grid">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" class="form-control" min="18" max="99">
+                </div>
+                <div class="form-group">
+                    <label for="education">Education Level</label>
+                    <select id="education" class="form-control">
+                        <option value="">Select Education</option>
+                        <option value="phd">PhD</option>
+                        <option value="masters">Master's Degree</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Work Experience (years)</label>
+                    <input type="number" id="experience" class="form-control" min="0" max="30">
+                </div>
+                <div class="form-group">
+                    <label for="language">Language Score (CLB)</label>
+                    <input type="number" id="language" class="form-control" min="0" max="12">
+                </div>
+            </div>
+            <button class="btn btn-primary" style="margin-top: var(--spacing-lg);">Calculate Score</button>
+        </div>
+
+        <div class="cta-section">
+            <a href="#" class="btn btn-primary">Start Your Application</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

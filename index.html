@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover amazing career opportunities and professional growth with oil-filament">
+    <title>oil-filament - Modern Solutions</title>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/shape-future.css" as="style">
+    <link rel="preload" href="css/modals.css" as="style">
+    <link rel="preload" href="css/auth.css" as="style">
+    <link rel="preload" href="css/jobs.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shape-future.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/jobs.css">
+    <script src="js/slideshow.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/modals.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/jobs">Jobs</a></li>
+                <li>
+                    <a href="/services" class="nav-link-services">Services</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h3>Immigration & Citizenship</h3>
+                            <ul>
+                                <li><a href="services/express-entry.html">Express Entry</a></li>
+                                <li><a href="services/study-permits.html">Study Permits</a></li>
+                                <li><a href="services/work-permits.html">Work Permits</a></li>
+                                <li><a href="services/family-sponsorship.html">Family Sponsorship</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Employment & Business</h3>
+                            <ul>
+                                <li><a href="services/job-bank-canada.html">Job Bank Canada</a></li>
+                                <li><a href="services/start-a-business.html">Start a Business</a></li>
+                                <li><a href="services/employment-insurance.html">Employment Insurance</a></li>
+                                <li><a href="services/workplace-standards.html">Workplace Standards</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Healthcare & Benefits</h3>
+                            <ul>
+                                <li><a href="services/healthcare-system.html">Healthcare System</a></li>
+                                <li><a href="services/child-benefits.html">Child Benefits</a></li>
+                                <li><a href="services/senior-benefits.html">Senior Benefits</a></li>
+                                <li><a href="services/social-insurance.html">Social Insurance</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Education & Culture</h3>
+                            <ul>
+                                <li><a href="services/education-system.html">Education System</a></li>
+                                <li><a href="services/language-programs.html">Language Programs</a></li>
+                                <li><a href="services/cultural-events.html">Cultural Events</a></li>
+                                <li><a href="services/arts-and-heritage.html">Arts & Heritage</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h3>Travel & Settlement</h3>
+                            <ul>
+                                <li><a href="services/provinces-guide.html">Provinces Guide</a></li>
+                                <li><a href="services/housing-support.html">Housing Support</a></li>
+                                <li><a href="services/transportation.html">Transportation</a></li>
+                                <li><a href="services/tourism-info.html">Tourism Info</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" onclick="openAuthModal('login')" class="nav-btn">Login</a></li>
+                <li><a href="#" onclick="openAuthModal('signup')" class="nav-btn nav-btn-primary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Auth Modals -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Log In</h2>
+                <button class="modal-close" onclick="closeAuthModal('login')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form" id="login-form" onsubmit="handleAuth(event, 'login')">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                        <div class="form-error">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="login-password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('login-password')">Show</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit">Log In</button>
+                    <div class="auth-switch">
+                        Don't have an account? <a href="#" onclick="switchModal('login', 'signup')">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sign Up</h2>
+                <button class="modal-close" onclick="closeAuthModal('signup')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form" id="signup-form" onsubmit="handleAuth(event, 'signup')">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" required>
+                        <div class="form-error">Please enter your full name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                        <div class="form-error">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signup-password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('signup-password')">Show</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit">Sign Up</button>
+                    <div class="auth-switch">
+                        Already have an account? <a href="#" onclick="switchModal('signup', 'login')">Log in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openAuthModal(type) {
+            document.getElementById(type + '-modal').classList.add('modal-show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAuthModal(type) {
+            document.getElementById(type + '-modal').classList.remove('modal-show');
+            document.body.style.overflow = '';
+        }
+
+        function switchModal(from, to) {
+            closeAuthModal(from);
+            setTimeout(() => openAuthModal(to), 100);
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = input.nextElementSibling;
+            input.type = input.type === 'password' ? 'text' : 'password';
+            button.textContent = input.type === 'password' ? 'Show' : 'Hide';
+        }
+
+        function handleAuth(event, type) {
+            event.preventDefault();
+            const form = event.target;
+            const email = document.getElementById(type + '-email').value;
+            const password = document.getElementById(type + '-password').value;
+            
+            // Add your authentication logic here
+            console.log(`${type} attempt:`, { email, password });
+            
+            // Show success message
+            form.innerHTML = `
+                <div style="text-align: center; padding: 20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <h3 style="color: #202124; margin: 16px 0;">Success!</h3>
+                    <p style="color: #5f6368;">${type === 'signup' ? 'Account created successfully!' : 'Logged in successfully!'}</p>
+                </div>
+            `;
+            
+            // Close modal after delay
+            setTimeout(() => {
+                closeAuthModal(type);
+                form.reset();
+            }, 2000);
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('modal-show');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    if (modal.classList.contains('modal-show')) {
+                        modal.classList.remove('modal-show');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slideshow">
+            <div class="slide active" style="background-image: url('images/1.jpg')"></div>
+            <div class="slide" style="background-image: url('images/2.jpg')"></div>
+            <div class="slide" style="background-image: url('images/3.jpg')"></div>
+            <div class="slide" style="background-image: url('images/4.jpg')"></div>
+            <div class="slide" style="background-image: url('images/5.jpg')"></div>
+            <div class="slide" style="background-image: url('images/6.jpg')"></div>
+            <div class="slide" style="background-image: url('images/7.jpg')"></div>
+            <div class="slide" style="background-image: url('images/8.jpg')"></div>
+            <div class="slide" style="background-image: url('images/9.jpg')"></div>
+            <div class="slide" style="background-image: url('images/10.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="welcome-content">
+                    <h1>Welcome to oil-filament</h1>
+                    <p class="hero-subtitle">Join our community and discover amazing opportunities</p>
+                    <div class="hero-buttons">
+                        <a href="jobs.html" class="btn btn-primary">Explore Opportunities</a>
+                        <a href="#services" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slideshow-nav">
+            <button class="prev" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="slide-indicators"></div>
+            <button class="next" aria-label="Next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+    </section>
+            <div class="hero-features">
+                <h2>Shape America's future</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                                <polyline points="17 21 17 13 7 13 7 21"/>
+                                <polyline points="7 3 7 8 15 8"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Save your favorite jobs and searches</h3>
+                            <p>Keep track of opportunities that interest you</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="12" y1="18" x2="12" y2="12"/>
+                                <line x1="9" y1="15" x2="15" y2="15"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Upload your resumes and documents</h3>
+                            <p>Easily manage and update your career materials</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Make your resume searchable</h3>
+                            <p>Let employers find you for relevant opportunities</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Apply for jobs in the federal government</h3>
+                            <p>Access thousands of opportunities across agencies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Careers Section -->
+    <section class="gov-careers">
+        <div class="container">
+            <h2>Explore Unique Careers with the Government</h2>
+            
+            <div class="career-chapters">
+                <!-- ICE Jobs -->
+                <div class="career-chapter">
+                    <h3>Immigration and Customs Enforcement (ICE) Jobs</h3>
+                    <div class="career-content">
+                        <div class="career-image">
+                            <img src="https://ktla.com/wp-content/uploads/sites/4/2025/06/GettyImages-1258485376.jpg?strip=1&w=640" alt="ICE Officers in Action" class="career-photo">
+                            <div class="image-caption">ICE Officers conducting field operations</div>
+                        </div>
+                        <p>ICE offers diverse career opportunities in law enforcement, immigration operations, and homeland security:</p>
+                        <ul>
+                            <li>
+                                <strong>Deportation Officers</strong>
+                                <p>Enforce immigration laws and manage cases of individuals subject to removal from the United States.</p>
+                            </li>
+                            <li>
+                                <strong>Criminal Investigators</strong>
+                                <p>Conduct complex criminal investigations related to border security, customs violations, and immigration fraud.</p>
+                            </li>
+                            <li>
+                                <strong>Intelligence Research Specialists</strong>
+                                <p>Analyze data and provide tactical intelligence support for ICE operations and investigations.</p>
+                            </li>
+                            <li>
+                                <strong>Mission Support Specialists</strong>
+                                <p>Provide critical administrative and technical support to facilitate ICE operations.</p>
+                            </li>
+                        </ul>
+                        <p class="career-note">Most positions require U.S. citizenship and the ability to obtain security clearance.</p>
+                        <div class="career-action">
+                            <a href="jobs/ice-careers.html" class="btn btn-primary btn-career">View More ICE Career Fields</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intelligence Careers -->
+                <div class="career-chapter">
+                    <h3>Intelligence Careers</h3>
+                    <div class="career-content">
+                        <div class="career-image">
+                            <img src="https://pi-labs.ai/wp-content/uploads/2025/01/DALL%C2%B7E-2025-01-30-11.57.23-A-high-tech-intelligence-operations-center-where-law-enforcement-officers-are-analyzing-real-time-AI-driven-data-on-multiple-large-screens.-The-screen-768x439.webp" alt="Intelligence Operations Center" class="career-photo">
+                            <div class="image-caption">Modern Intelligence Operations Center</div>
+                        </div>
+                        <p>Intelligence agencies offer challenging roles crucial to national security:</p>
+                        <ul>
+                            <li>
+                                <strong>Intelligence Analysts</strong>
+                                <p>Analyze complex data to identify patterns and trends related to national security threats.</p>
+                            </li>
+                            <li>
+                                <strong>Cybersecurity Specialists</strong>
+                                <p>Protect critical information systems and networks from cyber threats.</p>
+                            </li>
+                            <li>
+                                <strong>Foreign Language Experts</strong>
+                                <p>Provide critical translation and analysis of foreign communications.</p>
+                            </li>
+                            <li>
+                                <strong>Technical Collection Officers</strong>
+                                <p>Operate sophisticated systems to gather intelligence information.</p>
+                            </li>
+                        </ul>
+                        <p class="career-note">Positions typically require advanced degrees, security clearance, and specialized training.</p>
+                        <div class="career-action">
+                            <a href="jobs/intelligence-careers.html" class="btn btn-primary btn-career">View More Intelligence Career Fields</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <!-- Featured Jobs -->
+    <section class="section-jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Job Opportunities</h2>
+                <a href="/jobs" class="btn btn-secondary">View All Jobs</a>
+            </div>
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>Patent Examiner</h3>
+                        <span class="job-type">Full Time</span>
+                    </div>
+                    <div class="job-card-body">
+                        <p class="job-department">Patent and Trademark Office</p>
+                        <p class="job-location">Washington, DC</p>
+                        <p class="job-salary">$72,750 - $141,611 per year</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="/jobs/patent-examiner" class="btn btn-primary">Apply Now</a>
+                        <span class="deadline">Closes Sep 30, 2025</span>
+                    </div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>Intelligence Analyst</h3>
+                        <span class="job-type">Full Time</span>
+                    </div>
+                    <div class="job-card-body">
+                        <p class="job-department">Department of Defense</p>
+                        <p class="job-location">Multiple Locations</p>
+                        <p class="job-salary">$68,299 - $123,234 per year</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="/jobs/intelligence-analyst" class="btn btn-primary">Apply Now</a>
+                        <span class="deadline">Closes Sep 15, 2025</span>
+                    </div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>Immigration Services Officer</h3>
+                        <span class="job-type">Full Time</span>
+                    </div>
+                    <div class="job-card-body">
+                        <p class="job-department">U.S. Citizenship and Immigration Services</p>
+                        <p class="job-location">New York, NY</p>
+                        <p class="job-salary">$64,649 - $115,976 per year</p>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="/jobs/immigration-officer" class="btn btn-primary">Apply Now</a>
+                        <span class="deadline">Closes Oct 5, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="events-section">
+        <div class="container">
+            <h2>Upcoming Career Events</h2>
+            <div class="events-container">
+                <div class="featured-event-container">
+                    <div class="events-image">
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/971/711/non_2x/hand-holding-megaphone-with-job-fair-speech-bubble-banner-with-copy-space-for-business-marketing-flyers-banners-presentations-and-posters-illustration-vector.jpg" alt="Career Events Announcement">
+                    </div>
+                    <div class="featured-event">
+                        <div class="event-date">Sep 09, 2025</div>
+                        <h3>A day in the life of a CAPTO patent examiner</h3>
+                        <p class="event-type">Online</p>
+                        <p class="event-host">Hosted by Patent and Trademark Office</p>
+                        <a href="#" class="event-link">More information</a>
+                    </div>
+                </div>
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-date">Sep 30, 2025</div>
+                        <h3>Land the Job: Mastering your Two-page Resume</h3>
+                        <p class="event-type">Online</p>
+                        <p class="event-host">Hosted by Office of Personnel Management</p>
+                        <a href="#" class="event-link">More information</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">Nov 13, 2025</div>
+                        <h3>A day in the life of a USPTO patent examiner</h3>
+                        <p class="event-type">Online</p>
+                        <p class="event-host">Hosted by Patent and Trademark Office</p>
+                        <a href="#" class="event-link">More information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-section main-info">
+                    <div class="footer-logo">
+                        <a href="index.html">oil-filament</a>
+                    </div>
+                    <p class="footer-description">Empowering careers in government service and shaping America's future through professional opportunities and growth.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Career Resources</h3>
+                    <ul>
+                        <li><a href="jobs/ice-careers.html">ICE Careers</a></li>
+                        <li><a href="jobs/intelligence-careers.html">Intelligence Careers</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                        <li><a href="#">Career Development</a></li>
+                        <li><a href="#">Interview Tips</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Immigration Services</h3>
+                    <ul>
+                        <li><a href="services/express-entry.html">Express Entry</a></li>
+                        <li><a href="services/study-permits.html">Study Permits</a></li>
+                        <li><a href="services/work-permits.html">Work Permits</a></li>
+                        <li><a href="services/family-sponsorship.html">Family Sponsorship</a></li>
+                        <li><a href="services/citizenship.html">Citizenship</a></li>
+                        <li><a href="services/immigration-news.html">Immigration News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support Services</h3>
+                    <ul>
+                        <li><a href="services/healthcare-system.html">Healthcare System</a></li>
+                        <li><a href="services/housing-support.html">Housing Support</a></li>
+                        <li><a href="services/education-system.html">Education System</a></li>
+                        <li><a href="services/language-programs.html">Language Programs</a></li>
+                        <li><a href="services/cultural-events.html">Cultural Events</a></li>
+                        <li><a href="services/community-resources.html">Community Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact & Help</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:info@oil-filament.com">info@oil-filament.com</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>123 Business Ave, Tech City, TC 12345</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 1996 - 2025 oil-filament. All rights reserved.</p>
+                    <ul class="legal-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

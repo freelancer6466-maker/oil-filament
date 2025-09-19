@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - oil-filament</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .jobs-container {
+            max-width: 1200px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .job-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .job-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .job-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (same as index.html) -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li>
+                    <a href="#" class="nav-link-services">Services</a>
+                    <!-- Mega Menu (same as index.html) -->
+                </li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Jobs Section -->
+    <main class="jobs-container">
+        <h1>Available Positions</h1>
+        <div class="jobs-grid">
+            <!-- Sample Job Cards -->
+            <div class="job-card">
+                <h2 class="job-title">Senior Software Engineer</h2>
+                <div class="job-meta">
+                    <span>📍 Zurich</span>
+                    <span>💼 Full-time</span>
+                    <span>🔥 Senior</span>
+                </div>
+                <p class="job-description">Join our team as a Senior Software Engineer and help build the next generation of enterprise solutions.</p>
+                <a href="job-details.html" class="btn btn-primary">View Details</a>
+            </div>
+
+            <div class="job-card">
+                <h2 class="job-title">UX/UI Designer</h2>
+                <div class="job-meta">
+                    <span>📍 Geneva</span>
+                    <span>💼 Full-time</span>
+                    <span>👥 Mid-level</span>
+                </div>
+                <p class="job-description">Create beautiful and intuitive user experiences for our digital products and services.</p>
+                <a href="job-details.html" class="btn btn-primary">View Details</a>
+            </div>
+
+            <div class="job-card">
+                <h2 class="job-title">Product Manager</h2>
+                <div class="job-meta">
+                    <span>📍 Basel</span>
+                    <span>💼 Full-time</span>
+                    <span>🌟 Lead</span>
+                </div>
+                <p class="job-description">Lead product strategy and development for our flagship enterprise solutions.</p>
+                <a href="job-details.html" class="btn btn-primary">View Details</a>
+            </div>
+
+            <div class="job-card">
+                <h2 class="job-title">DevOps Engineer</h2>
+                <div class="job-meta">
+                    <span>📍 Bern</span>
+                    <span>💼 Full-time</span>
+                    <span>🔧 Mid-Senior</span>
+                </div>
+                <p class="job-description">Build and maintain our cloud infrastructure and deployment pipelines.</p>
+                <a href="job-details.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

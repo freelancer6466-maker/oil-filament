@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Programs Canada | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .program-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .level-indicator {
+            display: flex;
+            gap: 4px;
+            margin: var(--spacing-md) 0;
+        }
+
+        .level-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+        }
+
+        .level-dot.active {
+            background: var(--primary);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: var(--glass-background);
+        }
+
+        .comparison-table tr:hover {
+            background: var(--glass-background);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -50px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Language Programs</h1>
+            <p>Learn English and French in Canada</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Available Programs</h2>
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>LINC (Language Instruction for Newcomers)</h3>
+                    <ul class="checklist">
+                        <li>Free for permanent residents</li>
+                        <li>Full-time and part-time</li>
+                        <li>Childcare available</li>
+                        <li>Transportation assistance</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>ESL (English as Second Language)</h3>
+                    <ul class="checklist">
+                        <li>Various providers</li>
+                        <li>Flexible schedules</li>
+                        <li>Academic preparation</li>
+                        <li>Business English</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>FSL (French as Second Language)</h3>
+                    <ul class="checklist">
+                        <li>Quebec integration</li>
+                        <li>Bilingual career prep</li>
+                        <li>Cultural components</li>
+                        <li>All proficiency levels</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Language Proficiency Levels</h2>
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>CLB/NCLC Levels</h3>
+                    <h4>Beginner (1-4)</h4>
+                    <div class="level-indicator">
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot"></span>
+                        <span class="level-dot"></span>
+                        <span class="level-dot"></span>
+                        <span class="level-dot"></span>
+                    </div>
+                    <ul class="checklist">
+                        <li>Basic communication</li>
+                        <li>Simple conversations</li>
+                        <li>Essential vocabulary</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Intermediate (5-8)</h3>
+                    <div class="level-indicator">
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                    </div>
+                    <ul class="checklist">
+                        <li>Workplace communication</li>
+                        <li>Academic preparation</li>
+                        <li>Complex topics</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Advanced (9-12)</h3>
+                    <div class="level-indicator">
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                        <span class="level-dot active"></span>
+                    </div>
+                    <ul class="checklist">
+                        <li>Professional contexts</li>
+                        <li>Academic excellence</li>
+                        <li>Native-like fluency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Program Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>LINC</th>
+                        <th>ESL Programs</th>
+                        <th>FSL Programs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cost</td>
+                        <td>Free</td>
+                        <td>Varies</td>
+                        <td>Subsidized</td>
+                    </tr>
+                    <tr>
+                        <td>Duration</td>
+                        <td>Flexible</td>
+                        <td>4-52 weeks</td>
+                        <td>12-52 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Eligibility</td>
+                        <td>PR/Refugees</td>
+                        <td>All</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>Support Services</td>
+                        <td>Yes</td>
+                        <td>Limited</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-card">
+            <h2>Application Process</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <h3>Assessment Test</h3>
+                    <ul class="checklist">
+                        <li>Language benchmark test</li>
+                        <li>Placement evaluation</li>
+                        <li>Learning goals discussion</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <h3>Program Selection</h3>
+                    <ul class="checklist">
+                        <li>Choose program type</li>
+                        <li>Select schedule</li>
+                        <li>Review requirements</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <h3>Registration</h3>
+                    <ul class="checklist">
+                        <li>Submit documents</li>
+                        <li>Pay fees (if applicable)</li>
+                        <li>Confirm enrollment</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <h3>Begin Classes</h3>
+                    <ul class="checklist">
+                        <li>Orientation session</li>
+                        <li>Meet instructors</li>
+                        <li>Get learning materials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Find Programs</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Language Assessment</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

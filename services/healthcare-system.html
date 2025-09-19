@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Healthcare System | oil-filament</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-container {
+            max-width: 1000px;
+            margin: 120px auto 40px;
+            padding: 0 var(--spacing-xl);
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .healthcare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .healthcare-card {
+            background: var(--glass-background);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease;
+        }
+
+        .healthcare-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .steps-container {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .step-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .step-number {
+            position: absolute;
+            left: -50px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">oil-filament</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jobs.html">Jobs</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="service-container">
+        <div class="service-header">
+            <h1 class="service-title">Canadian Healthcare System</h1>
+            <p>Understanding Universal Healthcare in Canada</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Healthcare Coverage</h2>
+            <div class="healthcare-grid">
+                <div class="healthcare-card">
+                    <h3>Medical Services</h3>
+                    <ul class="checklist">
+                        <li>Doctor visits</li>
+                        <li>Hospital stays</li>
+                        <li>Emergency care</li>
+                        <li>Surgical procedures</li>
+                    </ul>
+                </div>
+                <div class="healthcare-card">
+                    <h3>Diagnostic Services</h3>
+                    <ul class="checklist">
+                        <li>Laboratory tests</li>
+                        <li>X-rays and scans</li>
+                        <li>Blood work</li>
+                        <li>Medical imaging</li>
+                    </ul>
+                </div>
+                <div class="healthcare-card">
+                    <h3>Specialist Care</h3>
+                    <ul class="checklist">
+                        <li>Referral-based access</li>
+                        <li>Specialized treatments</li>
+                        <li>Mental health services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Getting Your Health Card</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Check Eligibility</h3>
+                    <p>Canadian citizens, permanent residents, and some work permit holders</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Gather Documents</h3>
+                    <ul class="checklist">
+                        <li>Proof of citizenship/residency</li>
+                        <li>Proof of address</li>
+                        <li>Identity documents</li>
+                    </ul>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Apply at Service Center</h3>
+                    <p>Visit your provincial/territorial health service center</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Waiting Period</h3>
+                    <p>Up to 3 months in most provinces</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Additional Coverage Options</h2>
+            <div class="healthcare-grid">
+                <div class="healthcare-card">
+                    <h3>Private Insurance</h3>
+                    <ul class="checklist">
+                        <li>Dental care</li>
+                        <li>Vision care</li>
+                        <li>Prescription drugs</li>
+                        <li>Paramedical services</li>
+                    </ul>
+                </div>
+                <div class="healthcare-card">
+                    <h3>Provincial Programs</h3>
+                    <ul class="checklist">
+                        <li>Senior drug benefits</li>
+                        <li>Children's programs</li>
+                        <li>Low-income support</li>
+                    </ul>
+                </div>
+                <div class="healthcare-card">
+                    <h3>Travel Insurance</h3>
+                    <ul class="checklist">
+                        <li>Out-of-province coverage</li>
+                        <li>Emergency medical</li>
+                        <li>Medical evacuation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>Finding Healthcare Providers</h2>
+            <div class="healthcare-grid">
+                <div class="healthcare-card">
+                    <h3>Family Doctor</h3>
+                    <ul class="checklist">
+                        <li>Provincial doctor registry</li>
+                        <li>Online search tools</li>
+                        <li>Waitlist registration</li>
+                    </ul>
+                </div>
+                <div class="healthcare-card">
+                    <h3>Walk-in Clinics</h3>
+                    <ul class="checklist">
+                        <li>No appointment needed</li>
+                        <li>Extended hours</li>
+                        <li>Basic medical care</li>
+                    </ul>
+                </div>
+                <div class="healthcare-card">
+                    <h3>Emergency Services</h3>
+                    <ul class="checklist">
+                        <li>24/7 hospital care</li>
+                        <li>Ambulance services</li>
+                        <li>Urgent care centers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="#" class="btn btn-primary">Find Healthcare Provider</a>
+            <a href="#" class="btn btn-outline" style="margin-left: var(--spacing-md);">Health Card Application</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../jobs.html">Jobs</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@oil-filament.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Business Ave, Tech City, TC 12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
